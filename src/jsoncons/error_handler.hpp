@@ -42,7 +42,7 @@ public:
           column_number_(other.column_number_)
     {
     }
-    ~json_parse_exception() JSONCONS_ONEXCEPT
+    ~json_parse_exception() JSONCONS_NOEXCEPT
     {
     }
     const char* what() const JSONCONS_NOEXCEPT
