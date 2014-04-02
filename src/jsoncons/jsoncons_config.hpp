@@ -33,7 +33,11 @@ namespace jsoncons {
 #      define JSONCONS_NOEXCEPT noexcept
 #   endif
 #elif defined(__GNUC__)
-#   define JSONCONS_NOEXCEPT _GLIBCXX_USE_NOEXCEPT
+#   if defined(_GLIBCXX_USE_NOEXCEPT)
+#     define JSONCONS_NOEXCEPT _GLIBCXX_USE_NOEXCEPT
+#   else
+#     define JSONCONS_NOEXCEPT noexcept
+#   endif
 #else
 #   define JSONCONS_NOEXCEPT
 #endif

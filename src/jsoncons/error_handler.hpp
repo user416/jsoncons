@@ -42,6 +42,9 @@ public:
           column_number_(other.column_number_)
     {
     }
+    ~json_parse_exception() JSONCONS_ONEXCEPT
+    {
+    }
     const char* what() const JSONCONS_NOEXCEPT
     {
         std::ostringstream os;
